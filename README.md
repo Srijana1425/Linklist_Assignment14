@@ -48,6 +48,9 @@
 > If you remove it successfully,
 > the answer will be 1.
 > ```
+> *Answer*<br>
+> **Code** [Link]()
+
 
 ## 💡 Question 02
 
@@ -68,6 +71,8 @@
 > LinkedList: 1->2->3
 > Output:124
 > ```
+> *Answer*<br>
+> **Code** [Link]()
 
 ## 💡 Question 03
  
@@ -107,7 +112,8 @@
 > 
 > (Note:| represents the bottom pointer.)
 > ```
-
+> *Answer*<br>
+> **Code** [Link]()
 ## 💡 Question 04
 
 > You are given a special linked list with **N** nodes where each node has a next pointer pointing to its next node. You are also given **M** random pointers, where you will be given **M** number of pairs denoting two nodes **a** and **b**  **i.e. a->arb = b** (arb is pointer to random node)**.**
@@ -155,6 +161,8 @@
 > applying the method as stated in the
 > above example, the output will be 1.
 > ```
+> *Answer*<br>
+> **Code** [Link]()
 
 ## 💡 Question 05
 
@@ -183,6 +191,8 @@
 > Input: head = [2,1,3,5,6,4,7]
 > Output: [2,3,6,7,1,5,4]
 > ```
+> > *Answer*
+> **Code** [Link]()
 
 ## 💡 Question 06
 
@@ -209,6 +219,8 @@
 > k = 4
 > Output:5 6 7 8 1 2 3 4
 > ```
+> *Answer*<br>
+> **Code** [Link]()
 
 ## 💡 Question 07
 
@@ -235,6 +247,8 @@
 > Input: head = [2,7,4,3,5]
 > Output: [7,0,5,5,0]
 > ```
+> *Answer*<br>
+> **Code** [Link]()
 
 ## 💡 Question 08
 
@@ -266,3 +280,5 @@
 > Input: head = [1,2,3,-3,-2]
 > Output: [1]
 > ```
+> *Answer*<br>
+> **Code** [Link]()
