@@ -114,6 +114,7 @@
 > ```
 > *Answer*<br>
 > **Code** [Link]()
+> 
 ## 💡 Question 04
 
 > You are given a special linked list with **N** nodes where each node has a next pointer pointing to its next node. You are also given **M** random pointers, where you will be given **M** number of pairs denoting two nodes **a** and **b**  **i.e. a->arb = b** (arb is pointer to random node)**.**
@@ -124,7 +125,7 @@
 > 
 > Return the head of the copied linked list.
 > 
-> <img src="https://pwskills.notion.site/image/https%3A%2F%2Fcontribute.geeksforgeeks.org%2Fwp-content%2Fuploads%2Fclone.jpg?id=91feb271-fee1-4199-9997-34833a3388da&table=block&spaceId=6fae2e0f-dedc-48e9-bc59-af2654c78209&width=900&userId=&cache=v2" height="220px">
+>![q4](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/img/q4.jpg)
 > 
 > **Note** :- The diagram isn't part of any example, it just depicts an example of how the linked list may look like.
 > 
