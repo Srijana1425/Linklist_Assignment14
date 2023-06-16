@@ -49,7 +49,7 @@
 > the answer will be 1.
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans1.js)
 
 
 ## 💡 Question 02
@@ -72,7 +72,7 @@
 > Output:124
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans2.js)
 
 ## 💡 Question 03
  
@@ -113,7 +113,7 @@
 > (Note:| represents the bottom pointer.)
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans3.js)
 > 
 ## 💡 Question 04
 
@@ -163,7 +163,7 @@
 > above example, the output will be 1.
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans4.js)
 
 ## 💡 Question 05
 
@@ -193,7 +193,7 @@
 > Output: [2,3,6,7,1,5,4]
 > ```
 > > *Answer*
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans5.js)
 
 ## 💡 Question 06
 
@@ -221,7 +221,7 @@
 > Output:5 6 7 8 1 2 3 4
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans6.js)
 
 ## 💡 Question 07
 
@@ -249,7 +249,7 @@
 > Output: [7,0,5,5,0]
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans7.js)
 
 ## 💡 Question 08
 
@@ -282,4 +282,4 @@
 > Output: [1]
 > ```
 > *Answer*<br>
-> **Code** [Link]()
+> **Code** [Link](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/ans8.js)
