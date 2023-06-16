@@ -125,7 +125,7 @@
 > 
 > Return the head of the copied linked list.
 > 
->![q4](https://github.com/Srijana1425/Linklist_Assignment14/blob/main/img/q4.jpg)
+> <img src="https://pwskills.notion.site/image/https%3A%2F%2Fcontribute.geeksforgeeks.org%2Fwp-content%2Fuploads%2Fclone.jpg?id=91feb271-fee1-4199-9997-34833a3388da&table=block&spaceId=6fae2e0f-dedc-48e9-bc59-af2654c78209&width=900&userId=&cache=v2" height="220px">
 > 
 > **Note** :- The diagram isn't part of any example, it just depicts an example of how the linked list may look like.
 > 
