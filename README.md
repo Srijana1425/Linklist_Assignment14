@@ -8,7 +8,7 @@
 > Remove the loop from the linked list, if it is present, i.e. unlink the last node which is forming the loop.
 > 
 > **Example 1:**
-
+> ```
 > Input:
 > N = 3
 > value[] = {1,3,4}
@@ -49,42 +49,6 @@
 > the answer will be 1.
 > ```
 
-### 🚀 Answer
-
-```javascript
-function removeLoop(head) {
-  if (head === null || head.next === null) {
-    return;
-  }
-
-  let slow = head;
-  let fast = head;
-
-  // Detect the loop
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
-
-    if (slow === fast) {
-      break;
-    }
-  }
-
-  // If loop is found, fix the loop
-  if (slow === fast) {
-    slow = head;
-
-    while (slow.next !== fast.next) {
-      slow = slow.next;
-      fast = fast.next;
-    }
-
-    fast.next = null; // Remove the loop
-  }
-}
-
-```
-
 ## 💡 Question 02
 
 > A number **N** is represented in Linked List such that each digit corresponds to a node in linked list. You need to add 1 to it.
@@ -104,54 +68,6 @@ function removeLoop(head) {
 > LinkedList: 1->2->3
 > Output:124
 > ```
-
-### 🚀 Answer
-
-```javascript
-function addOne(head) {
-  // Reverse the linked list
-  head = reverseLinkedList(head);
-
-  let current = head;
-  let carry = 1;
-
-  // Add 1 to the linked list
-  while (current !== null) {
-    let sum = current.data + carry;
-    carry = Math.floor(sum / 10);
-    current.data = sum % 10;
-    current = current.next;
-  }
-
-  // Reverse the linked list again
-  head = reverseLinkedList(head);
-
-  // If carry is still remaining, create a new head node
-  if (carry > 0) {
-    let newNode = new Node(carry);
-    newNode.next = head;
-    head = newNode;
-  }
-
-  return head;
-}
-
-function reverseLinkedList(head) {
-  let current = head;
-  let prev = null;
-  let next = null;
-
-  while (current !== null) {
-    next = current.next;
-    current.next = prev;
-    prev = current;
-    current = next;
-  }
-
-  return prev;
-}
-
-```
 
 ## 💡 Question 03
  
@@ -191,46 +107,6 @@ function reverseLinkedList(head) {
 > 
 > (Note:| represents the bottom pointer.)
 > ```
-
-### 🚀 Answer
-
-```javascript
-function flattenLinkedList(head) {
-  if (head === null || head.next === null) {
-    return head;
-  }
-
-  // Merge two sorted linked lists
-  head.next = flattenLinkedList(head.next);
-
-  head = mergeLists(head, head.next);
-
-  return head;
-}
-
-function mergeLists(a, b) {
-  if (a === null) {
-    return b;
-  }
-
-  if (b === null) {
-    return a;
-  }
-
-  let result;
-
-  if (a.data <= b.data) {
-    result = a;
-    result.bottom = mergeLists(a.bottom, b);
-  } else {
-    result = b;
-    result.bottom = mergeLists(a, b.bottom);
-  }
-
-  return result;
-}
-
-```
 
 ## 💡 Question 04
 
@@ -280,46 +156,6 @@ function mergeLists(a, b) {
 > above example, the output will be 1.
 > ```
 
-### 🚀 Answer
-
-```javascript
-function cloneLinkedList(head) {
-  if (head === null) {
-    return null;
-  }
-
-  // Create a copy of each node and insert it next to the original node
-  let current = head;
-  while (current !== null) {
-    let newNode = new Node(current.data);
-    newNode.next = current.next;
-    current.next = newNode;
-    current = current.next.next;
-  }
-
-  // Set random pointers for the copied nodes
-  current = head;
-  while (current !== null) {
-    if (current.random !== null) {
-      current.next.random = current.random.next;
-    }
-    current = current.next.next;
-  }
-
-  // Separate the original and copied nodes
-  let clonedHead = head.next;
-  current = head;
-  while (current.next !== null) {
-    let temp = current.next;
-    current.next = current.next.next;
-    current = temp;
-  }
-
-  return clonedHead;
-}
-
-```
-
 ## 💡 Question 05
 
 > Given the `head` of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return *the reordered list*.
@@ -348,64 +184,6 @@ function cloneLinkedList(head) {
 > Output: [2,3,6,7,1,5,4]
 > ```
 
-### 🚀 Answer
-
-```javascript
-function reorderLinkedList(head) {
-  if (head === null || head.next === null) {
-    return head;
-  }
-
-  // Find the middle of the linked list
-  let slow = head;
-  let fast = head;
-
-  while (fast.next !== null && fast.next.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
-  }
-
-  let secondHalf = slow.next;
-  slow.next = null;
-
-  // Reverse the second half of the linked list
-  secondHalf = reverseLinkedList(secondHalf);
-
-  // Merge the two halves alternatively
-  let current1 = head;
-  let current2 = secondHalf;
-
-  while (current2 !== null) {
-    let temp1 = current1.next;
-    let temp2 = current2.next;
-
-    current1.next = current2;
-    current2.next = temp1;
-
-    current1 = temp1;
-    current2 = temp2;
-  }
-
-  return head;
-}
-
-function reverseLinkedList(head) {
-  let current = head;
-  let prev = null;
-  let next = null;
-
-  while (current !== null) {
-    next = current.next;
-    current.next = prev;
-    prev = current;
-    current = next;
-  }
-
-  return prev;
-}
-
-```
-
 ## 💡 Question 06
 
 > Given a singly linked list of size **N**. The task is to **left-shift** the linked list by **k** nodes, where **k** is a given positive integer smaller than or equal to length of the linked list.
@@ -432,56 +210,6 @@ function reverseLinkedList(head) {
 > Output:5 6 7 8 1 2 3 4
 > ```
 
-### 🚀 Answer
-
-```javascript
-function leftShiftLinkedList(head, k) {
-  if (head === null || head.next === null || k === 0) {
-    return head;
-  }
-
-  // Get the length of the linked list
-  let length = 0;
-  let current = head;
-
-  while (current !== null) {
-    length++;
-    current = current.next;
-  }
-
-  // Adjust the value of k
-  k = k % length;
-
-  if (k === 0) {
-    return head;
-  }
-
-  // Find the new head and tail of the linked list after shifting
-  let newHead = head;
-  let newTail = null;
-  let steps = length - k;
-
-  while (steps > 0) {
-    newTail = newHead;
-    newHead = newHead.next;
-    steps--;
-  }
-
-  // Rearrange the pointers
-  newTail.next = null;
-  current = newHead;
-
-  while (current.next !== null) {
-    current = current.next;
-  }
-
-  current.next = head;
-
-  return newHead;
-}
-
-```
-
 ## 💡 Question 07
 
 > You are given the `head` of a linked list with `n` nodes.
@@ -507,32 +235,6 @@ function leftShiftLinkedList(head, k) {
 > Input: head = [2,7,4,3,5]
 > Output: [7,0,5,5,0]
 > ```
-
-### 🚀 Answer
-
-```javascript
-function nextGreaterNodes(head) {
-  let result = [];
-  let stack = [];
-  let index = 0;
-
-  while (head !== null) {
-    result[index] = 0;
-
-    while (stack.length > 0 && stack[stack.length - 1].data < head.data) {
-      let node = stack.pop();
-      result[node.index] = head.data;
-    }
-
-    stack.push({ data: head.data, index: index });
-    index++;
-    head = head.next;
-  }
-
-  return result;
-}
-
-```
 
 ## 💡 Question 08
 
@@ -564,39 +266,3 @@ function nextGreaterNodes(head) {
 > Input: head = [1,2,3,-3,-2]
 > Output: [1]
 > ```
-
-### 🚀 Answer
-
-```javascript
-function removeZeroSumSublists(head) {
-  let dummy = new ListNode(0);
-  dummy.next = head;
-
-  let prefixSum = 0;
-  let map = new Map();
-  let current = dummy;
-
-  while (current !== null) {
-    prefixSum += current.val;
-
-    if (map.has(prefixSum)) {
-      let prev = map.get(prefixSum);
-      let node = prev.next;
-
-      while (node !== current) {
-        prefixSum += node.val;
-        map.delete(prefixSum);
-        node = node.next;
-      }
-
-      prev.next = current.next;
-    } else {
-      map.set(prefixSum, current);
-    }
-
-    current = current.next;
-  }
-
-  return dummy.next;
-}
-```
